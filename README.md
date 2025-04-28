@@ -29,29 +29,20 @@ Instale as dependências:
 
 Com o Node.js instalado, navegue até o diretório do projeto e instale as dependências:
 
-bash
-Copiar
-Editar
+
 npm install
 Ou, se estiver usando o Yarn:
 
-bash
-Copiar
-Editar
 yarn install
 Inicie o servidor de desenvolvimento:
 
 Para rodar o projeto localmente, use:
 
-bash
-Copiar
-Editar
+
 npm run dev
 Ou, se estiver usando o Yarn:
 
-bash
-Copiar
-Editar
+
 yarn dev
 Isso iniciará o servidor de desenvolvimento e você poderá acessar o portfólio no navegador via http://localhost:3000.
 
