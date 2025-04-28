@@ -33,10 +33,130 @@
   }
 }
 
+@keyframes glint {
+  0% {
+    left: -120%;
+  }
+  8% {
+    left: 50%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+.glint {
+  position: relative;
+  animation: glint 4s linear infinite;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 25%, rgba(0, 240, 255, 0.6) 50%, rgba(255, 255, 255, 0.3) 75%);
+  background-size: 200% 100%;
+  background-position: -120% 0;
+}
+
+/* Efeito de borda com brilho (border-glint) */
+@keyframes border-glint {
+  0% {
+    background-position: 0px, -250px;
+  }
+  25% {
+    background-position: 0px, -200px;
+  }
+  75% {
+    background-position: 0px, 50px;
+  }
+  100% {
+    background-position: 0px, 50px;
+  }
+}
+
+.border-glint {
+  position: relative;
+  animation: border-glint 4s linear infinite;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 25%, rgba(0, 240, 255, 0.6) 50%, rgba(255, 255, 255, 0.3) 75%);
+  background-size: 200% 100%;
+  background-position: 0px, -250px;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 50%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 50%);
+  mask-size: 100% 200%;
+  mask-position: 0 0;
+}
+
 .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+/* Typing effect */
+.typing-container {
+  position: relative;
+  display: inline-block;
+}
+
+.typing-text {
+  @apply bg-clip-text text-transparent bg-cyber-gradient;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(0, 240, 255, 0.7);
+  animation: typing 3.5s steps(40) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgba(0, 240, 255, 0.7) }
+}
+
+/* Particle effect */
+.particle {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(135deg, #00f0ff 0%, #b537f2 60%, #ff3e9d 100%);
+  border-radius: 50%;
+  animation: particle-animation 0.8s ease-out forwards;
+}
+
+@keyframes particle-animation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Typing completed text reveal with letter animation */
+.typing-reveal {
+  opacity: 0;
+  display: inline-block;
+  position: relative;
+  transform: translateY(10px);
+}
+
+.typing-reveal-active {
+  animation: reveal 0.5s forwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

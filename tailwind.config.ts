@@ -148,11 +148,24 @@ export default {
             transform: 'scale(1)' 
           }
         },
+        glint: {
+          '0%': { left: '-120%' },
+          '8%': { left: '50%' },
+          '100%': { left: '50%' },
+        },
+        'border-glint': {
+          '0%': { backgroundPosition: '0px, -250px' },
+          '25%': { backgroundPosition: '0px, -200px' },
+          '75%': { backgroundPosition: '0px, 50px' },
+          '100%': { backgroundPosition: '0px, 50px' },
+        },
         'fade': {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' }
         }
       },
+    
+   
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
@@ -163,7 +176,10 @@ export default {
         'text-fade-in': 'text-fade-in 0.5s ease-out forwards',
         'slide-in': 'slide-in 0.5s ease-out forwards',
         'appear': 'appear 0.4s ease-out forwards',
-        'fade': 'fade 0.5s ease-out forwards'
+        'fade': 'fade 0.5s ease-out forwards',
+        // Adicionando as novas animações
+        'glint': 'glint 4s linear infinite',
+        'border-glint': 'border-glint 4s linear infinite',
       },
       backgroundImage: {
         'cyber-gradient': 'linear-gradient(135deg, #00f0ff 0%, #b537f2 100%)',

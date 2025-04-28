@@ -12,19 +12,19 @@ const Index = () => {
   const featuredProjects = projects.filter(project => project.featured).slice(0, 3);
   
   return (
-    <div className="min-h-screen bg-cyber-dark dark:bg-cyber-dark pt-24">
+    <div className="min-h-screen  bg-cyber-dark dark:bg-cyber-dark pt-24">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-cyber-radial z-[-1] pointer-events-none"></div>
-      <div className="absolute inset-0 grid-bg z-[-1] pointer-events-none"></div>
+      <div className="absolute  inset-0 bg-cyber-radial z-[-1] pointer-events-none"></div>
+      <div className="absolute  inset-0 grid-bg z-[-1] pointer-events-none"></div>
       
       {/* Hero Section */}
       <AboutMe />
       
       {/* Featured Projects Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-20 ">
+        <div className="container  mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold cyber-gradient-text mb-4">
+            <h2 className="text-3xl glint md:text-4xl font-display font-bold cyber-gradient-text mb-4">
               Projetos em Destaque
             </h2>
             <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
@@ -32,7 +32,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className=" grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map(project => (
               <ProjectCard key={project.id} project={project} />
             ))}
@@ -59,7 +59,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative left-[6em] gap-8">
             {/* Frontend */}
             <div className="cyber-box rounded-lg p-6 hover:border-neon-blue/30 transition-all duration-300">
               <h3 className="text-xl font-display font-semibold cyber-gradient-text mb-4">
